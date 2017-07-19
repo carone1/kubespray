@@ -54,6 +54,12 @@ bin_dir: /usr/local/bin
 #  - 8.8.8.8
 #  - 8.8.4.4
 
+upstream_dns_servers:
+  - 192.168.13.13
+  - 192.168.13.12
+
+
+
 ## There are some changes specific to the cloud providers
 ## for instance we need to encapsulate packets with some network plugins
 ## If set the possible values are either 'gce', 'aws', 'azure', 'openstack', or 'vsphere'
@@ -97,7 +103,8 @@ bin_dir: /usr/local/bin
 #cert_management: script
 
 ## Please specify true if you want to perform a kernel upgrade
-kernel_upgrade: false
+#kernel_upgrade: false
+kernel_upgrade: true
 
 ## Etcd auto compaction retention for mvcc key value store in hour
 #etcd_compaction_retention: 0

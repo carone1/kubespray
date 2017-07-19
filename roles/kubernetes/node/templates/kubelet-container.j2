@@ -12,6 +12,14 @@
   -v /opt/cni:/opt/cni:ro \
   -v /etc/ssl:/etc/ssl:ro \
   -v /etc/resolv.conf:/etc/resolv.conf \
+  -v /opt/emc:/opt/emc:ro \
+  -v /bin/emc:/bin/emc:ro \
+  -v /usr/lib/x86_64-linux-gnu/libnuma.so.1.0.0:/usr/lib/x86_64-linux-gnu/libnuma.so.1.0.0:ro \
+  -v /usr/lib/x86_64-linux-gnu/libnuma.so.1:/usr/lib/x86_64-linux-gnu/libnuma.so.1:ro \
+  -v /sbin/mkfs.xfs:/sbin/mkfs.xfs:ro \
+  -v /sbin/mkfs.ext4:/sbin/mkfs.ext4:ro \
+  -v /usr/lib/nvidia-367:/usr/lib/nvidia-367 \
+  -v /usr/lib/nvidia-367/bin:/usr/lib/nvidia-367/bin \
   {% for dir in ssl_ca_dirs -%}
   -v {{ dir }}:{{ dir }}:ro \
   {% endfor -%}
